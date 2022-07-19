@@ -324,11 +324,10 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10;
+  gap: 10px;
 }
 
 .social-icon {
-  fill: #afb1b8;
 }
 
 .social-link:hover,
@@ -349,9 +348,43 @@ address {
   height: 44px;
   background-color: var(--btn-txt-cl);
   border-radius: 50%;
+  fill: #afb1b8;
+  padding: 12px;
 
   outline: 2px dashed red;
   outline-offset: -2px;
+}
+
+/* ------------------ Постійні клієнти  ------------------------- */
+
+.container-clients {
+  display: block;
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-txt-cl);
+}
+
+.section-clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.section-clients-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px rgba(175, 177, 184, 1);
+  padding: 16px 32px;
 }
 
 /*  ----------------- PORFOLIO page  ------------------------- * /
@@ -401,6 +434,8 @@ address {
 /*----------------------Footer------------------------------- */
 
 .footer {
+  display: flex;
+  margin-right: 20px;
   background-color: var(--sctn-sntnc);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -435,4 +470,47 @@ address {
 
 .footer-item:last-child {
   margin-bottom: 0px;
+}
+
+.footer-container-social {
+  display: block;
+}
+
+.footer-social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--btn-txt-cl);
+
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  width: 206px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--item-light);
+  border-radius: 50%;
+  fill: var(--btn-txt-cl);
+  padding: 12px;
+
+  outline: 2px dashed red;
+  outline-offset: -2px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-txt-cl);
 }
