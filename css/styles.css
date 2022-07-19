@@ -316,6 +316,42 @@ address {
   font-size: 16px;
   line-height: calc(19 / 16);
   color: var(--hdr-cntcts-lst);
+
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10;
+}
+
+.social-icon {
+  fill: #afb1b8;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-txt-cl);
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  fill: var(--btn-txt-cl);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--btn-txt-cl);
+  border-radius: 50%;
+
+  outline: 2px dashed red;
+  outline-offset: -2px;
 }
 
 /*  ----------------- PORFOLIO page  ------------------------- * /
