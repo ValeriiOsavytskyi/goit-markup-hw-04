@@ -133,6 +133,8 @@ address {
 .btn-portfolio:focus {
   color: var(--btn-txt-cl);
   background-color: var(--accent-txt-cl);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .header-link-logo-black {
@@ -175,12 +177,39 @@ address {
 .header-nav-list,
 .header-contacts-list {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .header-nav-item {
   margin-right: 50px;
+}
+
+.header-contacts-item {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.header-contacts-icon {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.header-icon:hover,
+.header-icon:focus {
+  fill: var(--accent-txt-cl);
 }
 
 .header-link,
@@ -190,6 +219,10 @@ address {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   cursor: pointer;
+
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link-contacts {
@@ -218,6 +251,17 @@ address {
   padding-bottom: 200px;
 }
 
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4) rgba(47, 48, 58, 0.4)), url();
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .sntns-hr {
   font-weight: 900;
   font-size: 44px;
@@ -242,6 +286,19 @@ address {
   flex-basis: 270px;
 }
 
+.features-icon.container {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  background-color: var(--btn-prtfl);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.features-icon {
+}
+
 .main-features-title {
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -255,11 +312,6 @@ address {
 }
 
 /*------------------------- Занятия -----------------*/
-
-.section-occupation {
-  margin-bottom: 94px;
-  padding-top: 0%;
-}
 
 .main-occupation-title {
   text-align: center;
@@ -327,9 +379,6 @@ address {
   gap: 10px;
 }
 
-.social-icon {
-}
-
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-txt-cl);
@@ -368,6 +417,7 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+  margin-bottom: 50px;
 }
 
 .section-clients-list {
@@ -377,14 +427,19 @@ address {
   gap: 30px;
 }
 
-.section-clients-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.clients-icon {
+  display: block;
   width: 170px;
   height: 92px;
-  border: 1px rgba(175, 177, 184, 1);
+  background-size: contain;
+  border: 1px solid rgba(175, 177, 184, 1);
+
   padding: 16px 32px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-txt-cl);
 }
 
 /*  ----------------- PORFOLIO page  ------------------------- * /
@@ -435,10 +490,25 @@ address {
 
 .footer {
   display: flex;
-  margin-right: 20px;
   background-color: var(--sctn-sntnc);
   padding-top: 60px;
   padding-bottom: 60px;
+
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-container-contacts {
+  display: block;
+  margin-right: 20px;
+  width: 231px;
+  margin-right: 20px;
 }
 
 .footer-link-logo-white {
@@ -489,9 +559,6 @@ address {
 
 .footer-social-list {
   display: flex;
-  width: 206px;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
 }
 
