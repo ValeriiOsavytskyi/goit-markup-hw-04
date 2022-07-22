@@ -15,6 +15,9 @@
   --sctn-sntnc: #2f303a;
   --header-container-border: #ececec;
   --accent-txt-hvr-fcs-cl: #188ce8;
+  --accent-social-link-light: #afb1b8;
+  --accent-social-link-dark: rgba(255, 255, 255, 0.1);
+  --clients-link: rgba(175, 177, 184, 1);
 
   /* ----------------- others  --------------------------- */
 }
@@ -198,19 +201,15 @@ address {
 }
 
 .header-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  padding: 0;
   margin-right: 10px;
+  fill: currentColor;
 }
 
+/*
 .header-icon:hover,
 .header-icon:focus {
   fill: var(--accent-txt-cl);
-}
+}*/
 
 .header-link,
 .header-link-contacts {
@@ -282,21 +281,15 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
   gap: 30px;
 }
 
-.container-features-item {
-  flex-basis: 270px;
-}
-
 .features-icon.container {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
-  padding: 25px 100px;
   background-color: var(--btn-prtfl);
   border-radius: 4px;
   margin-bottom: 30px;
-}
-.features-icon {
 }
 
 .main-features-title {
@@ -379,16 +372,6 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
   gap: 10px;
 }
 
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-txt-cl);
-}
-
-.social-icon:hover,
-.social-icon:focus {
-  fill: var(--btn-txt-cl);
-}
-
 .social-link {
   display: flex;
   align-items: center;
@@ -397,11 +380,20 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
   height: 44px;
   background-color: var(--btn-txt-cl);
   border-radius: 50%;
-  fill: #afb1b8;
-  padding: 12px;
+  color: var(--accent-social-link-light);
 
   outline: 2px dashed red;
   outline-offset: -2px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: var(--btn-txt-cl);
+  background-color: var(--accent-txt-cl);
+}
+
+.social-icon {
+  fill: currentColor;
 }
 
 /* ------------------ Постійні клієнти  ------------------------- */
@@ -427,19 +419,25 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
   gap: 30px;
 }
 
-.clients-icon {
-  display: block;
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   background-size: contain;
-  border: 1px solid rgba(175, 177, 184, 1);
-
-  padding: 16px 32px;
+  border: 1px solid var(--clients-link);
+  color: var(--clients-link);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  fill: var(--accent-txt-cl);
+  color: var(--accent-txt-cl);
+  border: 1px solid var(--accent-txt-cl);
+}
+
+.clients-icon {
+  fill: currentColor;
 }
 
 /*  ----------------- PORFOLIO page  ------------------------- * /
@@ -489,14 +487,9 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
 /*----------------------Footer------------------------------- */
 
 .footer {
-  display: flex;
   background-color: var(--sctn-sntnc);
   padding-top: 60px;
   padding-bottom: 60px;
-
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .container-footer {
@@ -505,10 +498,7 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
 }
 
 .footer-container-contacts {
-  display: block;
-  margin-right: 20px;
-  width: 231px;
-  margin-right: 20px;
+  margin-right: 70px;
 }
 
 .footer-link-logo-white {
@@ -534,7 +524,8 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
   color: var(--item-light);
 }
 
-.footer-item {
+.footer-item,
+.footer-address-location-item {
   margin-bottom: 9px;
 }
 
@@ -568,10 +559,9 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
   justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: var(--item-light);
+  background-color: var(--accent-social-link-dark);
   border-radius: 50%;
-  fill: var(--btn-txt-cl);
-  padding: 12px;
+  color: var(--btn-txt-cl);
 
   outline: 2px dashed red;
   outline-offset: -2px;
@@ -580,4 +570,8 @@ linear-gradient(to right, rgba(196, 196, 196, 1)),*/
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-txt-cl);
+}
+
+.footer-social-icon {
+  fill: currentColor;
 }
