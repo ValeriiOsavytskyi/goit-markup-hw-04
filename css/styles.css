@@ -19,8 +19,8 @@
   --accent-social-link-dark: rgba(255, 255, 255, 0.1);
   --clients-link: rgba(175, 177, 184, 1);
   --linear-gradient: rgba(47, 48, 58, 0.4);
-  --box-shadow-porfolio: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --box-shadow-porfolio: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 
   /* ----------------- others  --------------------------- */
 }
@@ -189,22 +189,17 @@ address {
 }
 
 .header-contacts-item {
-  display: flex;
-  align-items: center;
   margin-right: 30px;
 }
 
-.header-contacts-icon {
-  display: flex;
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  margin-right: 10px;
+.header-nav-item:nth-last-child(1),
+.header-contacts-item:nth-last-child(1) {
+  margin-right: 0;
 }
 
 .header-icon {
-  margin-right: 10px;
   fill: currentColor;
+  margin-right: 10px;
 }
 
 .header-link,
@@ -218,6 +213,7 @@ address {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 }
 
 .header-link-contacts {
@@ -252,18 +248,9 @@ address {
   background-color: var(--sctn-sntnc);
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: linear-gradient(to right var(--linear-gradient)), url('../images/hero.jpg');
+  background-image: linear-gradient(to right, var(--linear-gradient), var(--linear-gradient)),
+    url('../images/hero.jpg');
 }
-
-/*
-.hero {
-  background-image: linear-gradient(to right var(--linear-gradient)), url('../images/hero.jpg');
-}
-
-.images-hero {
-  background-image: linear-gradient(to right var(--linear-gradient)), url('../images/hero.jpg');
-}
-*/
 
 .sntns-hr {
   font-weight: 900;
@@ -285,7 +272,7 @@ address {
   gap: 30px;
 }
 
-.features-icon.container {
+.features-icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -309,6 +296,10 @@ address {
 }
 
 /*------------------------- Занятия -----------------*/
+
+.work {
+  padding-top: 0px;
+}
 
 .main-occupation-title {
   text-align: center;
@@ -430,9 +421,11 @@ address {
   justify-content: center;
   width: 170px;
   height: 92px;
-  background-size: contain;
+
   border: 1px solid var(--clients-link);
   color: var(--clients-link);
+
+  border-radius: 4px;
 }
 
 .clients-link:hover,
